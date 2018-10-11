@@ -1,0 +1,2 @@
+E:\Học kỳ 6\Thực tập nhóm\Lab\QuanLyHocSinhGiaoVien\QuanLyGV_HS\QuanLyGV_HS\bin\Debug\QuanLyGV_HS.exe.config
+E:\Học kỳ 6\Thực tập nhóm\Lab\QuanLyGiaoVienHocSinh\QuanLyGV_HS\QuanLyGV_HS\bin\Debug\QuanLyGV_HS.exe.config

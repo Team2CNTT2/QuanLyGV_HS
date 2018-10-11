@@ -1,0 +1,100 @@
+--HOC SINH
+CREATE TABLE [dbo].[tbHOC_SINH](
+	[MaHS] [nvarchar](10) NOT NULL,
+	[HoTen] [nvarchar](50) NULL,
+	[NgaySinh] [nvarchar](10) NULL,
+	[GioiTinh] [nvarchar](5) NULL,
+	[DiaChi] [nvarchar](50) NULL,
+	[MaLop] [nvarchar](10) NULL,
+ CONSTRAINT [PK_tbHOC_SINH] PRIMARY KEY CLUSTERED 
+(
+	[MaHS] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+--GIAO VIEN
+CREATE TABLE [dbo].[tbGIAO_VIEN](
+	[MaGV] [nvarchar](10) NOT NULL,
+	[TenGV] [nvarchar](30) NULL,
+	[GioiTinh] [nvarchar](10) NULL,
+	[Phone] [nvarchar](15) NULL,
+	[Email] [nvarchar](20) NULL,
+	[PhanLoaiGV] [nvarchar](20) NULL,
+ CONSTRAINT [PK_tbGIAOVIEN] PRIMARY KEY CLUSTERED 
+(
+	[MaGV] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+--LOP
+CREATE TABLE [dbo].[tbLOP](
+	[MaLop] [nvarchar](10) NOT NULL,
+	[TenLop] [nvarchar](50) NULL,
+ CONSTRAINT [PK_tbLOP] PRIMARY KEY CLUSTERED 
+(
+	[MaLop] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+--MON
+CREATE TABLE [dbo].[tbMON](
+	[MaMon] [nvarchar](10) NOT NULL,
+	[TenMon] [nvarchar](50) NOT NULL,
+	[HocKi] [nvarchar](10) NULL,
+ CONSTRAINT [PK_tbMON] PRIMARY KEY CLUSTERED 
+(
+	[MaMon] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+--LOGIN
+CREATE TABLE [dbo].[tbLOGIN](
+	[TenDN] [nvarchar](50) NOT NULL,
+	[MatKhau] [nvarchar](50) NOT NULL,
+	[Email] [nvarchar](50) NULL,
+ CONSTRAINT [PK_tbLOGIN] PRIMARY KEY CLUSTERED 
+(
+	[TenDN] ASC,
+	[MatKhau] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+--KETQUAMON
+CREATE TABLE [dbo].[tbKQ_MON](
+	[MaHS] [nvarchar](10) NULL,
+	[HoTen] [nvarchar](50) NULL,
+	[MaLop] [nvarchar](10) NULL,
+	[TenMon] [nvarchar](50) NULL,
+	[DiemGiuaKi] [float] NULL,
+	[DiemThi] [float] NULL,
+	[DiemTBM] [float] NULL,
+	[HocKi] [nvarchar](50) NULL
+) ON [PRIMARY]
+
+--KETQUANAM
+CREATE TABLE [dbo].[tbKQ_NAM](
+	[MaHS] [nvarchar](10) NOT NULL,
+	[DiemHK1] [float] NULL,
+	[DiemHK2] [float] NULL,
+	[DiemTongKet] [float] NULL,
+	[HanhKiem] [nvarchar](10) NULL,
+	[HocKi] [int] NULL,
+	[GhiChu] [nvarchar](50) NULL,
+ CONSTRAINT [PK_tbKQ_NAM] PRIMARY KEY CLUSTERED 
+(
+	[MaHS] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+--PHAN CONG
+CREATE TABLE [dbo].[tbPHAN_CONG](
+	[MaPC] [nchar](10) NOT NULL,
+	[MaMon] [nvarchar](10) NOT NULL,
+	[MaLop] [nvarchar](10) NOT NULL,
+	[MaGV] [nvarchar](10) NOT NULL,
+ CONSTRAINT [PK_tbPHAN_CONG] PRIMARY KEY CLUSTERED 
+(
+	[MaPC] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
