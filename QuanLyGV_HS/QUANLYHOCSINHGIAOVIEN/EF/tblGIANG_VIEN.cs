@@ -15,9 +15,6 @@ namespace QUANLYHOCSINHGIAOVIEN.EF
         [StringLength(30)]
         public string TenGV { get; set; }
 
-        [Column(TypeName = "date")]
-        public DateTime? NgaySInh { get; set; }
-
         [StringLength(10)]
         public string GioiTinh { get; set; }
 
@@ -29,6 +26,9 @@ namespace QUANLYHOCSINHGIAOVIEN.EF
 
         [StringLength(20)]
         public string PhanLoaiGV { get; set; }
+
+        [Column(TypeName = "date")]
+        public DateTime? NgaySInh { get; set; }
 
         [StringLength(10)]
         public string MaKhoa { get; set; }

@@ -18,5 +18,7 @@ namespace QUANLYHOCSINHGIAOVIEN.EF
 
         [StringLength(50)]
         public string TenLop { get; set; }
+
+        public virtual tblKHOA tblKHOA { get; set; }
     }
 }

@@ -33,5 +33,7 @@ namespace QUANLYHOCSINHGIAOVIEN.EF
 
         [StringLength(50)]
         public string GhiChu { get; set; }
+
+        public virtual tblMON tblMON { get; set; }
     }
 }

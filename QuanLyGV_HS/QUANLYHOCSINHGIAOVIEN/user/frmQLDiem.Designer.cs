@@ -123,6 +123,7 @@
             this.dgrDiem.Size = new System.Drawing.Size(707, 136);
             this.dgrDiem.TabIndex = 0;
             this.dgrDiem.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrDiem_CellClick_1);
+            this.dgrDiem.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrDiem_CellContentClick);
             this.dgrDiem.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dgrDiem_RowPrePaint_1);
             // 
             // STT
@@ -169,7 +170,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(71, 13);
             this.label1.TabIndex = 33;
-            this.label1.Text = "Điểm thi lần 1";
+            this.label1.Text = "Điểm thi lần 2";
             // 
             // label4
             // 

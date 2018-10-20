@@ -49,7 +49,7 @@
             this.btl2.BackColor = System.Drawing.Color.GreenYellow;
             this.btl2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btl2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btl2.Location = new System.Drawing.Point(35, 24);
+            this.btl2.Location = new System.Drawing.Point(35, 233);
             this.btl2.Name = "btl2";
             this.btl2.Size = new System.Drawing.Size(97, 57);
             this.btl2.TabIndex = 19;
@@ -62,7 +62,7 @@
             this.btl4.BackColor = System.Drawing.Color.GreenYellow;
             this.btl4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btl4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btl4.Location = new System.Drawing.Point(35, 245);
+            this.btl4.Location = new System.Drawing.Point(35, 34);
             this.btl4.Name = "btl4";
             this.btl4.Size = new System.Drawing.Size(97, 57);
             this.btl4.TabIndex = 22;
@@ -75,7 +75,7 @@
             this.btl5.BackColor = System.Drawing.Color.GreenYellow;
             this.btl5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btl5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btl5.Location = new System.Drawing.Point(35, 320);
+            this.btl5.Location = new System.Drawing.Point(35, 382);
             this.btl5.Name = "btl5";
             this.btl5.Size = new System.Drawing.Size(97, 57);
             this.btl5.TabIndex = 23;
@@ -101,7 +101,7 @@
             this.btl1.BackColor = System.Drawing.Color.GreenYellow;
             this.btl1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btl1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btl1.Location = new System.Drawing.Point(35, 97);
+            this.btl1.Location = new System.Drawing.Point(35, 310);
             this.btl1.Name = "btl1";
             this.btl1.Size = new System.Drawing.Size(97, 57);
             this.btl1.TabIndex = 18;
@@ -114,7 +114,7 @@
             this.btl6.BackColor = System.Drawing.Color.GreenYellow;
             this.btl6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btl6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btl6.Location = new System.Drawing.Point(35, 393);
+            this.btl6.Location = new System.Drawing.Point(35, 107);
             this.btl6.Name = "btl6";
             this.btl6.Size = new System.Drawing.Size(97, 57);
             this.btl6.TabIndex = 24;
@@ -125,10 +125,10 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.btl5);
+            this.panel1.Controls.Add(this.btl2);
             this.panel1.Controls.Add(this.linkDangXuat);
             this.panel1.Controls.Add(this.btl6);
-            this.panel1.Controls.Add(this.btl2);
-            this.panel1.Controls.Add(this.btl5);
             this.panel1.Controls.Add(this.btl1);
             this.panel1.Controls.Add(this.btl4);
             this.panel1.Controls.Add(this.btl3);
@@ -140,10 +140,13 @@
             // linkDangXuat
             // 
             this.linkDangXuat.AutoSize = true;
+            this.linkDangXuat.BackColor = System.Drawing.Color.Tomato;
+            this.linkDangXuat.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkDangXuat.ForeColor = System.Drawing.Color.Red;
             this.linkDangXuat.LinkColor = System.Drawing.Color.Black;
             this.linkDangXuat.Location = new System.Drawing.Point(55, 465);
             this.linkDangXuat.Name = "linkDangXuat";
-            this.linkDangXuat.Size = new System.Drawing.Size(56, 13);
+            this.linkDangXuat.Size = new System.Drawing.Size(61, 15);
             this.linkDangXuat.TabIndex = 25;
             this.linkDangXuat.TabStop = true;
             this.linkDangXuat.Text = "Đăng xuất";

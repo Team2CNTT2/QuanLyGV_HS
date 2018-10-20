@@ -92,6 +92,36 @@
     <Compile Include="user\frmGiangVien.Designer.cs">
       <DependentUpon>frmGiangVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="user\frmKhoa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="user\frmKhoa.Designer.cs">
+      <DependentUpon>frmKhoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="user\frmLop.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="user\frmLop.Designer.cs">
+      <DependentUpon>frmLop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="user\frmMonhoc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="user\frmMonhoc.Designer.cs">
+      <DependentUpon>frmMonhoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="user\frmQLDiem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="user\frmQLDiem.Designer.cs">
+      <DependentUpon>frmQLDiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="user\frmQLSV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="user\frmQLSV.Designer.cs">
+      <DependentUpon>frmQLSV.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -110,6 +140,21 @@
     </Compile>
     <EmbeddedResource Include="user\frmGiangVien.resx">
       <DependentUpon>frmGiangVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user\frmKhoa.resx">
+      <DependentUpon>frmKhoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user\frmLop.resx">
+      <DependentUpon>frmLop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user\frmMonhoc.resx">
+      <DependentUpon>frmMonhoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user\frmQLDiem.resx">
+      <DependentUpon>frmQLDiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user\frmQLSV.resx">
+      <DependentUpon>frmQLSV.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

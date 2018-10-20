@@ -60,9 +60,9 @@ namespace QUANLYHOCSINHGIAOVIEN.user
                 k.TenKhoa = txtTenKhoa.Text;
                 KHOAF f = new KHOAF();
                 f.Delete(k);
-                txtKhoa.Clear();
-                txtTenKhoa.Clear();
+               
                 dgrKhoa.DataSource = context.tblKHOAs.ToList();
+                frmKhoa_Load(sender, e);
             }
                
         }
@@ -73,10 +73,12 @@ namespace QUANLYHOCSINHGIAOVIEN.user
             if (MessageBox.Show(string.Format("Sửa khoa có mã '{0}'?", id), "", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
                 tblKHOA k = new tblKHOA();
-                k.MaKhoa = txtKhoa.Text;
-                k.TenKhoa = txtTenKhoa.Text;
+                k.MaKhoa = txtKhoa.Text.Trim();
+                k.TenKhoa = txtTenKhoa.Text.Trim();
                 KHOAF f = new KHOAF();
                 f.Update(k);
+                txtKhoa.Clear();
+                txtTenKhoa.Clear();
                 dgrKhoa.DataSource = context.tblKHOAs.ToList();
             }
                 

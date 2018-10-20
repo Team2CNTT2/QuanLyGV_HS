@@ -15,7 +15,7 @@ namespace QUANLYHOCSINHGIAOVIEN.EF
         [StringLength(50)]
         public string HoTen { get; set; }
 
-        [StringLength(50)]
+        [StringLength(10)]
         public string NgaySinh { get; set; }
 
         [StringLength(5)]

@@ -187,5 +187,10 @@ namespace QUANLYHOCSINHGIAOVIEN.user
         {
             dgrDiem.Rows[e.RowIndex].Cells["STT"].Value = e.RowIndex + 1;
         }
+
+        private void dgrDiem_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

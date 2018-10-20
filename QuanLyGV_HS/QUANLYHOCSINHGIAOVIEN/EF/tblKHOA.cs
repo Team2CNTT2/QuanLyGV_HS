@@ -9,11 +9,20 @@ namespace QUANLYHOCSINHGIAOVIEN.EF
     [Table("tblKHOA")]
     public partial class tblKHOA
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public tblKHOA()
+        {
+            tblLOPs = new HashSet<tblLOP>();
+        }
+
         [Key]
         [StringLength(10)]
         public string MaKhoa { get; set; }
 
         [StringLength(50)]
         public string TenKhoa { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<tblLOP> tblLOPs { get; set; }
     }
 }

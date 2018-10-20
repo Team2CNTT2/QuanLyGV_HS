@@ -9,10 +9,17 @@ namespace QUANLYHOCSINHGIAOVIEN.EF
     [Table("tblMON")]
     public partial class tblMON
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public tblMON()
+        {
+            tblKET_QUA = new HashSet<tblKET_QUA>();
+        }
+
         [Key]
         [StringLength(10)]
         public string MaMon { get; set; }
 
+        [Required]
         [StringLength(50)]
         public string TenMon { get; set; }
 
@@ -23,5 +30,8 @@ namespace QUANLYHOCSINHGIAOVIEN.EF
 
         [StringLength(10)]
         public string MaKhoa { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<tblKET_QUA> tblKET_QUA { get; set; }
     }
 }
