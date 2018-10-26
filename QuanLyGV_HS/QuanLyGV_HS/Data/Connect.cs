@@ -7,13 +7,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QuanLyNhanSu.Data
+namespace QuanLyGV_HS.Data
 {
     class Connect
     {
 
         // public static string chuoiketnoi = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\database\DuLieu.mdf;Integrated Security=True;Connect Timeout=30";
-        public static string chuoiketnoi = @"Data Source = " + SystemInformation.ComputerName + "Initial Catalog=QL_NHANSU;Integrated Security=True";
+        //public static string chuoiketnoi = @"Data Source = "+ SystemInformation.ComputerName +"Initial Catalog=QuanLyGV_HS;Integrated Security=True";
+        public static string chuoiketnoi = @"Data Source =GUTI14 ;Initial Catalog=QuanLyGV_HS;Integrated Security=True";
+        
         public static SqlConnection con;
         public static SqlCommand cmd;
         public static SqlDataAdapter da;
@@ -54,6 +56,25 @@ namespace QuanLyNhanSu.Data
             }
             dongketnoi();
             return kq;
+        }
+        public static string nhanvien;
+        public static int DangNhap(String tenDangNhap, String matKhau)
+        {
+            Connect.openketnoi();
+            DataTable nd = new DataTable();
+            nd = Connect.gettable("Select * from tbLOGIN where TenDN='" + tenDangNhap + "'");
+            if (nd.Rows.Count == 0)
+                return 0;
+            String matkhau_hethong = nd.Rows[0]["MatKhau"].ToString();
+            if (matkhau_hethong != matKhau)
+            {
+                return 1;//Sai mat khau
+            }
+            else
+            {
+                nhanvien = tenDangNhap;
+                return 2;//Dang Nhap thanh cong
+            }
         }
     }
 }
